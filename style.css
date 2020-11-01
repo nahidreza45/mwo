@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.display-box{
+    display: block;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+.math-box{
+    display: block;
+    margin: 25px 10px 10px;
+    
+}
+.time-score-box{
+    display: block;
+    border-bottom: 2px solid black;
+}
+#time-box,#score-box{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+.option-box{
+    text-align: center;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+.options{
+    width: 25%;
+    margin: 10px 5px;
+    padding: 10px 5px;
+    background: #512275;
+    color: #e7f1f3;
+    border-radius: 15px;
+    font-weight: 900;
+    display: inline-block;
+    outline: none;
+    border: 2px solid #512275;
+    transition: .3s;
+}
+.options:active{
+    background: white;
+    color: #512275;
+    transition: .3s;
+}
+
+.show-wrong-right{
+    margin: 15px 5px;
+    padding: 5px;
+    text-align: center;
+}
+.message-box{
+    text-align: center;
+}
