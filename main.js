@@ -24,26 +24,94 @@ function start() {
     
     var number1 = randomNumber(10);
     var number2 = randomNumber(10);
+    var number3 = randomNumber(10);
+    var number1_100 = randomNumber(100);
+    var number2_100 = randomNumber(100);
+    var number3_100 = randomNumber(100);
     
     
     
-    var randomNumber_for_oporator = randomNumber(5);
-    if (randomNumber_for_oporator===1) {
-        qsn_math = number1+"+"+number2;
-        ans_math = number1+number2;
-    }else if(randomNumber_for_oporator===2){
-        qsn_math = number1+"-"+number2;
-        ans_math = number1-number2;
-    }else if(randomNumber_for_oporator===3){
-        qsn_math = number1+"×"+number2;
-        ans_math = number1*number2;
+    var randomNumber_for_oporator = randomNumber(4);
+    
+    if (score<20) {
+        if (randomNumber_for_oporator===1) {
+            qsn_math = number1+"+"+number2;
+            ans_math = number1 + number2;
+        }else if (randomNumber_for_oporator===2){
+            qsn_math = number1+"-"+number2;
+            ans_math = number1 - number2;
+        }else if (randomNumber_for_oporator===3){
+            qsn_math = number1+"×"+number2;
+            ans_math = number1 * number2;
+        }else if (randomNumber_for_oporator===4){
+            var extra_num = number1*number2;
+            qsn_math = extra_num+"÷"+number2;
+            ans_math = extra_num / number2;
+        }
+    }else if (score<35){
+        if (randomNumber_for_oporator===1) {
+            qsn_math = number1+"+"+number2+"+"+number3;
+            ans_math = number1 + number2 + number3;
+        }else if (randomNumber_for_oporator===2){
+            qsn_math = number1+"-"+number2+"-"+number3;
+            ans_math = number1 - number2- number3;
+        }else if (randomNumber_for_oporator===3){
+            qsn_math = number1+"×"+number2+"×"+number3;
+            ans_math = number1 * number2 * number3;
+        }else if (randomNumber_for_oporator===4){
+            qsn_math = number1+"²"+"+"+number2;
+            ans_math = (number1**2)+number2;
+        }    
+    }else if (score<50){
+        if (randomNumber_for_oporator===1) {
+            qsn_math = number1_100+"+"+number2_100+"+"+number3_100;
+            ans_math = number1_100 + number2_100 + number3_100;
+        }else if (randomNumber_for_oporator===2){
+            qsn_math = number1_100+"-"+number2_100+"+"+number3_100;
+            ans_math = number1_100 - number2_100 + number3_100;
+        }else if (randomNumber_for_oporator===3){
+            qsn_math = number1_100+"×"+number2;
+            ans_math = number1_100 * number2;
+        }else if (randomNumber_for_oporator===4){
+            qsn_math = number3+"³"+"-"+number2;
+            ans_math = (number3**3)-number2;
+        }
+    }else if (score<80){
+        if (randomNumber_for_oporator===1) {
+            qsn_math = number1_100+"+"+number2+"×"+number3;
+            ans_math = number1_100 + number2 * number3;
+        }else if (randomNumber_for_oporator===2){
+            qsn_math = number1+"²"+"+"+number2+"³"+"+"+number3+"⁰";
+            ans_math = (number1**2) + (number2**3) + (number3**0);
+        }else if (randomNumber_for_oporator===3){
+            var extra_num2=number1_100*number3*number2;
+            qsn_math = extra_num2+"÷"+number2;
+            ans_math = extra_num2 / number2;
+        }else if (randomNumber_for_oporator===4){
+            var extra_num3=number3**2;
+            qsn_math = "√"+extra_num3+"+"+number2;
+            ans_math = (extra_num3**(1/2))+number2;
+        }
     }else{
-        var xtr_number=number2*number1;
-        qsn_math = xtr_number+"÷"+number2;
+        if (randomNumber_for_oporator===1) {
+            qsn_math = number1_100+"-"+number2_100+"×"+number3;
+            ans_math = number1_100 - number2_100 * number3;
+        }else if (randomNumber_for_oporator===2){
+            qsn_math = number1+"²"+"+"+number2+"2"+"+"+number3+"2";
+            ans_math = (number1**2) + (number2**2) + (number3**2);
+        }else if (randomNumber_for_oporator===3){
+            var extra_num4=number1_100*number3*number2;
+            qsn_math = extra_num2+"÷"+number2+"+"+number3_100;
+            ans_math = extra_num2 / number2+number3_100;
+        }else if (randomNumber_for_oporator===4){
+            var extra_num5=number1_100**2;
+            qsn_math = "√"+extra_num5+"+"+number3_100+"+"+number2;
+            ans_math = (extra_num5**(1/2))+number3_100+number2;
+        }
         
-        ans_math = xtr_number/number2;
     }
     
+    console.log(randomNumber_for_oporator);
     
     function make_option(x,y,z) {
         option_1_pg.innerHTML =ans_math+x;
@@ -112,14 +180,11 @@ function start() {
         correct_ans=option_2_pg;
     }
     
-    
     mathBox.innerHTML=qsn_math;
-
-
 }
 
 var dont_count= true;
-var timer = 11;
+var timer = 31;
 function count_down(x) {
         dont_count=false;
         timer-=1;
@@ -129,7 +194,7 @@ function count_down(x) {
             count_down();
         }else{
             lost_msg.innerHTML="Game Over";
-            xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should love math.";
+            xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should like math.";
         
         }
         
@@ -151,7 +216,7 @@ function check_ans(x) {
     }else{
         lost_msg.innerHTML="Game Over";
         gameOver=true;
-        xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should love math.";
+        xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should like math.";
         
     }
     
