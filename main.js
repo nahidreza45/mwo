@@ -76,12 +76,12 @@ function start() {
             qsn_math = number3+"³"+"-"+number2;
             ans_math = (number3**3)-number2;
         }
-    }else if (score<80){
+    }else if (score<70){
         if (randomNumber_for_oporator===1) {
             qsn_math = number1_100+"+"+number2+"×"+number3;
             ans_math = number1_100 + number2 * number3;
         }else if (randomNumber_for_oporator===2){
-            qsn_math = number1+"²"+"+"+number2+"³"+"+"+number3+"⁰";
+            qsn_math = number1+"²"+"+"+number2+"³"+"+"+number3+"°";
             ans_math = (number1**2) + (number2**3) + (number3**0);
         }else if (randomNumber_for_oporator===3){
             var extra_num2=number1_100*number3*number2;
@@ -97,7 +97,7 @@ function start() {
             qsn_math = number1_100+"-"+number2_100+"×"+number3;
             ans_math = number1_100 - number2_100 * number3;
         }else if (randomNumber_for_oporator===2){
-            qsn_math = number1+"²"+"+"+number2+"2"+"+"+number3+"2";
+            qsn_math = number1+"²"+"+"+number2+"²"+"+"+number3+"²";
             ans_math = (number1**2) + (number2**2) + (number3**2);
         }else if (randomNumber_for_oporator===3){
             var extra_num4=number1_100*number3*number2;
@@ -110,8 +110,6 @@ function start() {
         }
         
     }
-    
-    console.log(randomNumber_for_oporator);
     
     function make_option(x,y,z) {
         option_1_pg.innerHTML =ans_math+x;
@@ -175,16 +173,57 @@ function start() {
     } else if(randomNumber_for_option===18){
         make_option(-2,-1,0);
         correct_ans=option_3_pg;
+    }else if (randomNumber_for_option==19){
+        make_option(-3,0,3);
+        correct_ans=option_2_pg;
+    } else if(randomNumber_for_option===20){
+        make_option(-3,3,0);
+        correct_ans=option_3_pg;
+    } else if (randomNumber_for_option===21) {
+        make_option(0,3,4);
+        correct_ans=option_1_pg;
+    } else if (randomNumber_for_option===8) {
+        make_option(0,4,3);
+        correct_ans=option_1_pg;
+    } else if(randomNumber_for_option===9){
+        make_option(3,0,4);
+        correct_ans=option_2_pg;
+    } else if(randomNumber_for_option===10){
+        make_option(4,0,3);
+        correct_ans=option_2_pg;
+    } else if(randomNumber_for_option===11){
+        make_option(3,4,0);
+        correct_ans=option_3_pg;
+    } else if(randomNumber_for_option===12){
+        make_option(4,3,0);
+        correct_ans=option_3_pg;
+    } else if (randomNumber_for_option===13) {
+        make_option(0,-3,-4);
+        correct_ans=option_1_pg;
+    } else if (randomNumber_for_option===14) {
+        make_option(0,-4,-3);
+        correct_ans=option_1_pg;
+    } else if(randomNumber_for_option===15){
+        make_option(-3,0,-4);
+        correct_ans=option_2_pg;
+    } else if(randomNumber_for_option===16){
+        make_option(-4,0,-3);
+        correct_ans=option_2_pg;
+    } else if(randomNumber_for_option===17){
+        make_option(-3,-4,0);
+        correct_ans=option_3_pg;
+    } else if(randomNumber_for_option===18){
+        make_option(-4,-3,0);
+        correct_ans=option_3_pg;
     }else{
-        make_option(-2,0,2);
+        make_option(-5,0,5);
         correct_ans=option_2_pg;
     }
-    
     mathBox.innerHTML=qsn_math;
 }
 
 var dont_count= true;
-var timer = 31;
+var timer = 29;
 function count_down(x) {
         dont_count=false;
         timer-=1;
@@ -194,7 +233,7 @@ function count_down(x) {
             count_down();
         }else{
             lost_msg.innerHTML="Game Over";
-            xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should like math.";
+            xtra_msg.innerHTML="Ask your enemy to beat your score.<br>Your score is "+score;
         
         }
         
@@ -212,11 +251,11 @@ function check_ans(x) {
         setTimeout(function() {
             start();
         
-        },0);
+        },300);
     }else{
         lost_msg.innerHTML="Game Over";
         gameOver=true;
-        xtra_msg.innerHTML="Ask your enemy to beat your score.<br>You should love math,you should like math.";
+        xtra_msg.innerHTML="Ask your enemy to beat your score.<br>Your score is "+score;
         
     }
     

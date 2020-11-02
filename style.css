@@ -2,12 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Itim', cursive;
 }
 
 
 .display-box{
     display: block;
-    border-radius: 10px;
     margin: 5px;
     padding: 10px;
     position: relative;
@@ -16,6 +16,7 @@
 .math-box{
     display: block;
     margin: 25px 10px 10px;
+    font-size: 40px;
     
 }
 .time-score-box{
@@ -38,7 +39,7 @@
 .options{
     width: 25%;
     margin: 10px 5px;
-    padding: 10px 5px;
+    padding: 5px;
     background: #512275;
     color: #e7f1f3;
     border-radius: 15px;
@@ -47,6 +48,7 @@
     outline: none;
     border: 2px solid #512275;
     transition: .3s;
+    font-size: 30px;
 }
 .options:active{
     background: white;
@@ -61,4 +63,47 @@
 }
 .message-box{
     text-align: center;
+}
+
+
+header h1{
+    background: #663f94;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 45px;
+}
+.lines{
+    margin: 10px 15px;
+    padding: 10px;
+    color: #1c1c1c;
+    font-size: 18px;
+}
+.lines ul li{
+    margin: 3px 0;
+}
+.links{
+    text-align: center;
+}
+.links a{
+    background: white;
+    color: #663f94;
+    font-size: 30px;
+    border: 3px solid #663f94;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 1px 30px;
+    transition: 0.4s;
+}
+.links a:hover{
+    background: #663f94;
+    color: white;
+}
+footer{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left:0;
+    right: 0;
+    margin: auto;
 }
