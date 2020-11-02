@@ -118,7 +118,7 @@ function start() {
     }
     
     
-    var randomNumber_for_option= randomNumber(20);
+    var randomNumber_for_option= randomNumber(33);
     if (randomNumber_for_option===1) {
         make_option(0,1,-1);
         correct_ans=option_1_pg;
@@ -182,37 +182,37 @@ function start() {
     } else if (randomNumber_for_option===21) {
         make_option(0,3,4);
         correct_ans=option_1_pg;
-    } else if (randomNumber_for_option===8) {
+    } else if (randomNumber_for_option===22) {
         make_option(0,4,3);
         correct_ans=option_1_pg;
-    } else if(randomNumber_for_option===9){
+    } else if(randomNumber_for_option===23){
         make_option(3,0,4);
         correct_ans=option_2_pg;
-    } else if(randomNumber_for_option===10){
+    } else if(randomNumber_for_option===24){
         make_option(4,0,3);
         correct_ans=option_2_pg;
-    } else if(randomNumber_for_option===11){
+    } else if(randomNumber_for_option===25){
         make_option(3,4,0);
         correct_ans=option_3_pg;
-    } else if(randomNumber_for_option===12){
+    } else if(randomNumber_for_option===26){
         make_option(4,3,0);
         correct_ans=option_3_pg;
-    } else if (randomNumber_for_option===13) {
+    } else if (randomNumber_for_option===27) {
         make_option(0,-3,-4);
         correct_ans=option_1_pg;
-    } else if (randomNumber_for_option===14) {
+    } else if (randomNumber_for_option===28) {
         make_option(0,-4,-3);
         correct_ans=option_1_pg;
-    } else if(randomNumber_for_option===15){
+    } else if(randomNumber_for_option===29){
         make_option(-3,0,-4);
         correct_ans=option_2_pg;
-    } else if(randomNumber_for_option===16){
+    } else if(randomNumber_for_option===30){
         make_option(-4,0,-3);
         correct_ans=option_2_pg;
-    } else if(randomNumber_for_option===17){
+    } else if(randomNumber_for_option===31){
         make_option(-3,-4,0);
         correct_ans=option_3_pg;
-    } else if(randomNumber_for_option===18){
+    } else if(randomNumber_for_option===32){
         make_option(-4,-3,0);
         correct_ans=option_3_pg;
     }else{
