@@ -8,7 +8,7 @@ const score_pg = document.getElementById('score-box');
 const timer_pg = document.getElementById('time-box');
 const lost_msg = document.getElementById('lost-msg');
 const xtra_msg = document.getElementById('xtra-msg');
-
+const play_again = document.getElementById('play-again-links');
 
 var score=0;
 var correct_ans= null;
@@ -101,8 +101,8 @@ function start() {
             ans_math = (number1**2) + (number2**2) + (number3**2);
         }else if (randomNumber_for_oporator===3){
             var extra_num4=number1_100*number3*number2;
-            qsn_math = extra_num2+"÷"+number2+"+"+number3_100;
-            ans_math = extra_num2 / number2+number3_100;
+            qsn_math = extra_num4+"÷"+number2+"+"+number3_100;
+            ans_math = extra_num4 / number2+number3_100;
         }else if (randomNumber_for_oporator===4){
             var extra_num5=number1_100**2;
             qsn_math = "√"+extra_num5+"+"+number3_100+"+"+number2;
@@ -216,8 +216,8 @@ function start() {
         make_option(-4,-3,0);
         correct_ans=option_3_pg;
     }else{
-        make_option(-5,0,5);
-        correct_ans=option_2_pg;
+        make_option(0,5,-5);
+        correct_ans=option_1_pg;
     }
     mathBox.innerHTML=qsn_math;
 }
@@ -228,13 +228,13 @@ function count_down(x) {
         dont_count=false;
         timer-=1;
     setTimeout(function() {
-        if (timer>-1) {
+        if (timer > -1) {
             timer_pg.innerHTML="<h2>Time: "+timer+"</h2>";
             count_down();
         }else{
             lost_msg.innerHTML="Game Over";
             xtra_msg.innerHTML="Ask your enemy to beat your score.<br>Your score is "+score;
-        
+            play_again.style.display="block";
         }
         
     }, 1000);
@@ -246,7 +246,7 @@ function check_ans(x) {
     if (dont_count) {
         count_down();
     }
-    if (timer>0) {
+    if (timer > -1) {
     
         setTimeout(function() {
             start();
@@ -256,7 +256,7 @@ function check_ans(x) {
         lost_msg.innerHTML="Game Over";
         gameOver=true;
         xtra_msg.innerHTML="Ask your enemy to beat your score.<br>Your score is "+score;
-        
+        play_again.style.display="block";
     }
     
     if (!gameOver) {

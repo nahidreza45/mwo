@@ -9,14 +9,16 @@
 .display-box{
     display: block;
     margin: 5px;
-    padding: 10px;
+    padding: 5px;
     position: relative;
     text-align: center;
 }
 .math-box{
     display: block;
-    margin: 25px 10px 10px;
+    margin: 25px 0 10px;
     font-size: 40px;
+    text-align: center;
+    width: 100%;
     
 }
 .time-score-box{
@@ -49,6 +51,7 @@
     border: 2px solid #512275;
     transition: .3s;
     font-size: 30px;
+    text-align: center;
 }
 .options:active{
     background: white;
@@ -106,4 +109,8 @@ footer{
     left:0;
     right: 0;
     margin: auto;
+}
+#play-again-links{
+    margin: 15px 0 0;
+    display: none;
 }

@@ -22,12 +22,12 @@
         bottom: 15px;
     }
     .math-box{
-        font-size: 120px;
-        margin: 75px 30px 30px;
+        font-size: 100px;
+        margin: 75px 0 30px;
     }
     .display-box{
        margin: 15px;
-       padding: 30px;
+       padding: 15px;
     }
     .time-score-box{
         border-width: 6px;
@@ -46,7 +46,7 @@
         padding: 15px;
         border-radius: 45px;
         border-width: 6px;
-        font-size: 90px;
+        font-size: 75px;
     }
     .show-wrong-right{
         margin: 45px 15px;
@@ -55,5 +55,8 @@
     }
     .message-box{
         font-size: 3em;
+    }
+    #play-again-links{
+        margin: 45px 0 0;
     }
 }
