@@ -1,5 +1,5 @@
 
-const mathBox= document.getElementById('math-box');   
+const mathBox = document.getElementById('math-box');   
 const option_1_pg = document.getElementById("option-1");
 const option_2_pg = document.getElementById("option-2");
 const option_3_pg = document.getElementById("option-3");
@@ -16,7 +16,9 @@ var correct_ans= null;
 function start() {
     var ans_math = null;
     var qsn_math =null;
-    
+    option_1_pg.style.background = "#512275";
+    option_2_pg.style.background = "#512275";
+    option_3_pg.style.background = "#512275";
     
     function randomNumber(x) {
         return Math.floor((Math.random() * x) + 1);
@@ -81,8 +83,8 @@ function start() {
             qsn_math = number1_100+"+"+number2+"×"+number3;
             ans_math = number1_100 + number2 * number3;
         }else if (randomNumber_for_oporator===2){
-            qsn_math = number1+"²"+"+"+number2+"³"+"+"+number3+"°";
-            ans_math = (number1**2) + (number2**3) + (number3**0);
+            qsn_math = number1+"²"+"+"+number2+"°"+"+"+number3+"³";
+            ans_math = (number1**2) + (number2**0) + (number3**3);
         }else if (randomNumber_for_oporator===3){
             var extra_num2=number1_100*number3*number2;
             qsn_math = extra_num2+"÷"+number2;
@@ -246,12 +248,17 @@ function check_ans(x) {
     if (dont_count) {
         count_down();
     }
+    option_1_pg.style.background="red";
+    option_2_pg.style.background="red";
+    option_3_pg.style.background="red";
+    correct_ans.style.background="green";
+    
     if (timer > -1) {
     
         setTimeout(function() {
             start();
         
-        },300);
+        },500);
     }else{
         lost_msg.innerHTML="Game Over";
         gameOver=true;
@@ -263,12 +270,12 @@ function check_ans(x) {
         
     
         if (x===correct_ans) {
-            emoji_show.innerHTML="✔️ Absolutely correct ✔️";
-            score+=5;
-            timer+=2;
+            emoji_show.innerHTML="✔️";
+            score+=4;
+            timer+=3;
             
         }else{
-            emoji_show.innerHTML="❌ Oppps..wrong ❌";
+            emoji_show.innerHTML="❌";
             score-=3;
         }
     }
