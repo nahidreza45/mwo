@@ -231,6 +231,15 @@ function count_down(x) {
         timer-=1;
     setTimeout(function() {
         if (timer > -1) {
+            if (timer<4) {
+                timer_pg.style.color="#c90000";
+            }else if(timer<10){
+                timer_pg.style.color="#e9de00";
+            }else if (timer<20){
+                timer_pg.style.color="#03ae02";
+            }else{
+                timer_pg.style.color="black";
+            }
             timer_pg.innerHTML="<h2>Time: "+timer+"</h2>";
             count_down();
         }else{
