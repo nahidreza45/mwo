@@ -31,9 +31,11 @@ function start() {
     var number2_100 = randomNumber(100);
     var number3_100 = randomNumber(100);
     
+    var x=null;
+    var x_ans = null;
     
     
-    var randomNumber_for_oporator = randomNumber(4);
+    var randomNumber_for_oporator = randomNumber(5);
     
     if (score<20) {
         if (randomNumber_for_oporator===1) {
@@ -49,6 +51,11 @@ function start() {
             var extra_num = number1*number2;
             qsn_math = extra_num+"÷"+number2;
             ans_math = extra_num / number2;
+        }else{
+            x = number1;
+            x_ans = x+number3;
+            qsn_math = "X"+"+"+number3 +"=" + x_ans +"<br>X=?";
+            ans_math = x;
         }
     }else if (score<35){
         if (randomNumber_for_oporator===1) {
@@ -63,6 +70,11 @@ function start() {
         }else if (randomNumber_for_oporator===4){
             qsn_math = number1+"²"+"+"+number2;
             ans_math = (number1**2)+number2;
+        }else{
+            x = number2_100;
+            x_ans = x+number3_100;
+            qsn_math = "X"+"+"+number3_100 +"=" + x_ans +"<br>X=?";
+            ans_math = x;
         }    
     }else if (score<50){
         if (randomNumber_for_oporator===1) {
@@ -77,6 +89,11 @@ function start() {
         }else if (randomNumber_for_oporator===4){
             qsn_math = number3+"³"+"-"+number2;
             ans_math = (number3**3)-number2;
+        }else{
+            x = number3;
+            x_ans = x*number2;
+            qsn_math = number2+"x"+"=" + x_ans +"<br>X=?";
+            ans_math = x;
         }
     }else if (score<70){
         if (randomNumber_for_oporator===1) {
@@ -93,6 +110,11 @@ function start() {
             var extra_num3=number3**2;
             qsn_math = "√"+extra_num3+"+"+number2;
             ans_math = (extra_num3**(1/2))+number2;
+        }else{
+            x = number2_100;
+            x_ans = number3_100-x;
+            qsn_math = number3_100 + "-" + "X" + "=" + x_ans +"<br>X=?";
+            ans_math = x;
         }
     }else{
         if (randomNumber_for_oporator===1) {
@@ -109,6 +131,12 @@ function start() {
             var extra_num5=number1_100**2;
             qsn_math = "√"+extra_num5+"+"+number3_100+"+"+number2;
             ans_math = (extra_num5**(1/2))+number3_100+number2;
+        }else{
+            x = number1;
+            var extra_num6 = x*number3;
+            x_ans = number3;
+            qsn_math = extra_num6+"÷"+ "X" +"=" + x_ans +"<br>X=?";
+            ans_math = x;
         }
         
     }
