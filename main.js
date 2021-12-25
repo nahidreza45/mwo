@@ -15,6 +15,10 @@ const mainPage = document.getElementById('main-pg');
 const gamePage = document.getElementById('game-pg');
 
 let store = window.localStorage;
+if ((store.getItem("highScore")) == null) {
+    store.setItem("highScore","0");
+    store.setItem("name","You");
+}
 
 let score=0;
 let correctAnswer= null;
@@ -180,7 +184,7 @@ function start() {
 }
 
 let dont_count= true;
-let timer = 3;
+let timer = 30;
 
 function count_down(x) {
         dont_count=false;
