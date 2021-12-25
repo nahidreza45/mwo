@@ -5,7 +5,9 @@
     font-family: 'Itim', cursive;
 }
 
-
+#game-pg {
+    display: none;
+}
 .display-box{
     display: block;
     margin: 5px;
@@ -53,11 +55,6 @@
     text-align: center;
 }
 
-.show-wrong-right{
-    margin: 15px 5px;
-    padding: 5px;
-    text-align: center;
-}
 .message-box{
     text-align: center;
 }
@@ -82,7 +79,7 @@ header h1{
 .links{
     text-align: center;
 }
-.links a{
+.links button{
     background: white;
     color: #663f94;
     font-size: 30px;
@@ -92,7 +89,7 @@ header h1{
     padding: 1px 30px;
     transition: 0.4s;
 }
-.links a:hover{
+.links button:hover{
     background: #663f94;
     color: white;
 }
@@ -107,4 +104,52 @@ footer{
 #play-again-links{
     margin: 15px 0 0;
     display: none;
+}
+#name-part {
+    display: none;
+    text-align: center;
+    margin: 10px;
+}
+#name-part input {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#name-part input:focus {
+    border: 3px solid #663f94;
+    outline: none;
+}
+#name-part button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 3px solid #663f94;
+    color: #663f94;
+    background: white;
+    font-weight: 400;
+}
+#name-part button:focus {
+    background: #663f94;
+    color: white;
+}
+
+#highest-score-show {
+    display: block;
+    margin: 15px 50px;
+    text-align: center;
+    padding: 3px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#highest-score-show h3 {
+    font-size: 20px;
+    margin: 5px;
+}
+#highest-score-show span {
+    font-size: 16px;
+    margin: 5px;
 }

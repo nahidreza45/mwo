@@ -12,23 +12,77 @@
         <header>
             <h1>MathWorkOut</h1>
         </header>
-        <div class="lines">
-            <ul>
-                <li>This is a math solving game.</li>
-                <li>You have to solve simple math quickly.</li>
-                <li>Rules are very simple.</li>
-                <li>You will get 30 seconds at the beginning of the game.</li>
-                <li>For every correct answer you will get 3 more seconds.</li>
-                <li>For wrong answer no time will be added.</li>
-                <li>For every correct answer you will get 4 points.</li>
-                <li>For wrong answer 3 points will be subtracted from your score.</li>
-            </ul>
+        <div id="main-pg">
+            
+            <div class="lines">
+                <ul>
+                    <li>This is a math solving game.</li>
+                    <li>You have to solve simple math quickly.</li>
+                    <li>Rules are very simple.</li>
+                    <li>You will get 30 seconds at the beginning of the game.</li>
+                    <li>For every correct answer you will get 3 more seconds.</li>
+                    <li>For wrong answer no time will be added.</li>
+                    <li>For every correct answer you will get 4 points.</li>
+                    <li>For wrong answer 3 points will be subtracted from your score.</li>
+                    
+                </ul>
+            </div>
+            <div id="highest-score-show">
+                <h3>HIGHEST SCORE</h3>
+                <span id="hss"></span>
+               
+            </div>
+            
+            <div class="links">
+                <button onclick="mainPageHide()">Start</button>
+            </div>
         </div>
-        <div class="links">
-            <a href="game_pg.html">Start</a>
+        
+        
+        
+        <div id="game-pg">
+           
+            <div class="main-body">
+                <div class="display-box">
+                    <div class="time-score-box" id="time-score-box">
+                        <div id="score-box">
+                            <h2>Score: 0</h2>
+                        </div>
+                        <div id="time-box">
+                            <h2>Time: 30</h2>
+                        </div>
+                    </div>
+                    <div class="math-box">
+                        <h2 id="math-box"></h2>
+                    </div>
+                </div>
+                <div class="option-box">
+                    <button type="submit" class="options" id="option-1" onclick="check_ans(optionOnePage)"></button>
+                    <button type="submit" class="options" id="option-2" onclick="check_ans(optionTwoPage)"></button>
+                    <button type="submit" class="options" id="option-3" onclick="check_ans(optionThreePage)"></button>
+                </div>
+                
+       
+            
+                <div class="message-box">
+                    <h1 id="lost-msg"></h1>
+                    <p id="xtra-msg"></p>
+                </div>
+                <div id="name-part">
+                    <input type="text" name="" id="current-player-name" value="" placeholder="Enter your name" />
+                    <button type="submit" onclick="nameEntered()">Enter</button>
+                </div>
+            </div>
+            <div class="links" id="play-again-links">
+                <button onclick="playAgain()" type="submit">Play again</button>
+            </div>
         </div>
+        
+        
         <footer>
             ©Nahid Reza
         </footer>
+        
+         <script src="main.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
