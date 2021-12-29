@@ -71,7 +71,7 @@
        font-size: 3em;
        padding: 11px 22px;
        border-radius: 20px;
-       border: 6px solid #663f94;
+       border: 6px solid black;
    }
    #highest-score-show {
        margin: 45px 150px;
@@ -87,5 +87,4 @@
         font-size: 28px;
         margin: 15px;
     }
-   
 }
