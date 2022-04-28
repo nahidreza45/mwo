@@ -151,7 +151,12 @@ header h1{
     font-weight: normal;
 }
 footer{
-    position: relative;
-    top: 20px;
+    position: fixed;
+    bottom: 0px;
+    padding: 1px 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
     text-align: center;
+    background-color: white;
 }
